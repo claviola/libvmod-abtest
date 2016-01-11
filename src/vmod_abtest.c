@@ -206,7 +206,7 @@ static void parse_rule(const struct vrt_ctx *ctx, struct rule *rule, const char 
     }
 
     s = source;
-    if ((r = regexec(&time_regex, s, 2, match, 0) == 0)) {
+    if ((r = regexec(&time_regex, s, 2, match, 0)) == 0) {
         rule->duration = strtod(s + match[1].rm_so, NULL);
     } else {
         rule->duration = 0.;
