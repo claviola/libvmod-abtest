@@ -237,15 +237,7 @@ using the varnishtest tool.
 
 Usage::
 
- ./configure VARNISHSRC=DIR [VMODDIR=DIR]
-
-`VARNISHSRC` is the directory of the Varnish source tree for which to
-compile your vmod. Both the `VARNISHSRC` and `VARNISHSRC/include`
-will be added to the include search paths for your module.
-
-Optionally you can also set the vmod install directory by adding
-`VMODDIR=DIR` (defaults to the pkg-config discovered directory from your
-Varnish installation).
+ ./configure
 
 Make targets:
 
@@ -264,8 +256,8 @@ In your VCL you could then use this vmod along the following lines::
 ACKNOWLEDGEMENTS
 ================
 
-The general structure is inspired from the
-`example vmod <https://www.varnish-cache.org/vmod/example-vmod-hello-world>`_
+The general structure is inspired by
+`libvmod-example <https://github.com/varnish/libvmod-example>`_
 and many others.
 
 The weighted random function is originally from
@@ -275,7 +267,6 @@ HISTORY
 =======
 
 Version 0.1: Initial version.
-
 
 SEE ALSO
 ========
