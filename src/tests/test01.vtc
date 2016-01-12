@@ -25,7 +25,7 @@ varnish v1 -vcl+backend {
 client c1 {
     txreq -url "/"
     rxresp
-    expect resp.http.abtest == ".*::a::1;b::1;"
+    expect resp.http.abtest == ".*:a:1;b:1; "
 }
 
 # Run the client
